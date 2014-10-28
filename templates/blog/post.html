@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block title %} {{ post.title }} {% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <span style="color: grey"> <b>{{ post.created_at }}</b></span>
+    <p>
+        <h1><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h1>
+    </p>
+    <p> {{ post.content }}</p>
+</div>
+{% endblock%}

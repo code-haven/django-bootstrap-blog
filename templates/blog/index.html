@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block title %} Latest Blog Entries {% endblock %}
+{% block content %}
+{% for post in posts %}
+<div id="content">
+    <span style="color: grey"> <b>{{ post.created_at }}</b></span>
+    <p>
+        <h2><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h2>
+    </p>
+    <p> {{ post.content }}</p>
+</div>
+
+{% endfor %}
+{% endblock%}
