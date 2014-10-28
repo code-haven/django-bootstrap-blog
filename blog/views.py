@@ -7,6 +7,6 @@ def index(request):
     return render(request, 'blog/index.html', {'posts': latest_posts})
 
 
-def post(request):
-    blog_post = BlogPost.objects.get(slug='hello-world')
+def post(request, slug):
+    blog_post = BlogPost.objects.get(slug=slug)
     return render(request, 'blog/post.html', {'post': blog_post})
