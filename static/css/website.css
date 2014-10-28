@@ -2,10 +2,21 @@
             Author: Abhinav I
             Dependencies: Bootstrap 3.2
                                                                     */
+@font-face {
+font-family: AUdimat;
+src: url("/static/fonts/AUdimat-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: AUdimat;
+font-weight: bold;
+src: url("/static/fonts/AUdimat-Bold.otf") format("opentype");
+}
 
 body {
     background: #f0f0f0;
     font-size: 1.5em;
+    font-family: 'AUdimat', sans-serif;
 }
 
 /*  Navigation bar - Red*/
@@ -58,8 +69,26 @@ a:hover, a:focus {
 	background: #ffffff;
 	width: auto;
 	margin: 0 auto;
-	padding: 2%;
+	padding: 20px;
     padding-left: 3%;
     margin-bottom: 30px;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #901102;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background: #ffffff;
+}
+
+.page-header {
+    color: #901102;
+    text-align: center;
+}

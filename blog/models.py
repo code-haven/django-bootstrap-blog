@@ -7,9 +7,16 @@ class BlogPost(models.Model):
     content = models.TextField(blank=False)
 
     slug = models.SlugField(unique=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(null=False)
+    modified_at = models.DateTimeField(null=False)
 
     def __unicode__(self):
         return self.title
+
     def get_absolute_url(self):
 		return reverse("post_url", kwargs={"slug": self.slug})
+
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Blog Entry'
+        verbose_name_plural = 'Blog Entries'

@@ -7,10 +7,12 @@ urlpatterns = patterns(
 	'',
     url(r'^$', 'blog.views.index'),
     url(r'^blog/', include('blog.urls')),
+
+    url(r'^about/', 'thebinaryrealm.views.about'),
+    url(r'^projects/', 'thebinaryrealm.views.projects'),
+    url(r'^contact/', 'thebinaryrealm.views.contact'),
+    
     url(r'^admin/', include(admin.site.urls)),
+
 )
 
-# Serving static files
-urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-)
