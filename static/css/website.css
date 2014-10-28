@@ -92,3 +92,10 @@ img {
     color: #901102;
     text-align: center;
 }
+
+#contact {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
